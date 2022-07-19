@@ -1,0 +1,294 @@
+@import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+/*1. how to move the picture to the left and the text to the right and making it inline-block*/
+/*2. how to exactly move to the exact section of the page*/
+
+*{
+   
+    padding: 0;
+    margin:0;
+    box-sizing: border-box;
+   
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+body{
+    background-color:rgb(255, 255, 255)
+}
+
+header{
+    font-family: 'Lobster', sans-serif;
+    overflow:hidden;
+    background-color: rgb(152, 152, 152);
+    /*background: rgb(255,120,120);
+    background: linear-gradient(90deg, rgba(255,120,120,1) 0%, rgba(248,255,128,1) 100%);*/
+    padding: 10px;
+    position:fixed;
+    z-index: 10;
+    width: 100%;
+
+}
+
+nav ul{
+    margin-right: 20px;
+}
+
+header img{
+    margin-left: 15px;
+    width: 50px;
+    cursor:pointer;
+}
+
+nav ul li{
+    list-style-type: none;
+    display:inline-block;
+    transition: .3s ease;
+    padding: 10px 20px;
+    font-size: 19px;
+}
+
+nav ul li a{
+    font-weight:bold; 
+    transition: .3s ease; 
+}
+
+
+nav ul li a:hover{
+  color: rgb(40, 40, 40);
+}
+nav{
+   float: right;
+
+}
+
+
+nav ul li a{
+    text-decoration: none;
+    color: white;
+    font-size: 30px;
+}
+
+#home {
+    height:1000px;
+    background-image: url("./pexels-lisa-1279330.jpg");
+    background-size: cover;
+    background-position: top center;
+    position: relative;
+    z-index: 1;
+    
+}
+
+#home::after{
+    content:'';
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    background-color: black;
+    opacity: .6;
+    z-index: -1;
+}
+
+#home .text{
+    position: relative;
+    top: 200px;
+    color:white;
+}
+
+
+
+#home .text h1{
+    font-family: 'Lobster', sans-serif;
+    font-weight: bold;
+    font-size: 120px;
+    text-align:center;
+    text-transform: uppercase;
+}
+
+#home .text{
+    top: 150px;
+}
+
+#home .text a{
+   
+    text-decoration: none;
+    color: white;
+    margin: 0px 30px;
+    display:block;
+    width: 175px;
+    text-align:center;
+    font-family: 'Roboto', sans-serif;
+    text-transform: uppercase;
+    
+}
+
+#home .text .linkA{
+    border: 3px solid red;
+    background-color: red;
+    margin: 25px auto;
+    padding: 20px 25px;
+    transition: .3s ease;
+    border-radius: 10px;
+}
+
+#home .text .linkB{
+    border: 3px solid  green;
+    background-color: green;
+    padding: 20px 25px;
+    margin: 0 auto;   
+    transition: .3s ease;
+    border-radius: 10px;
+}
+
+#home .text .linkA:hover{
+    background-color: rgb(245, 89, 89);
+    border: 3px solid rgb(245, 89, 89);
+}
+
+#home .text .linkB:hover{
+    background-color: rgb(67, 144, 67);
+    border: 3px solid rgb(67, 144, 67);
+}
+
+#About .info{
+    margin-top: 50px;
+    margin-left: 30px;
+}
+#About .info h1{
+    margin-top: 30px;
+    margin-left: 20px;
+    font-family: 'Lobster';
+    font-size: 50px;
+}
+
+#About .info img{
+    height: 200px;
+    width: 325px;
+    margin-top: 15px;
+    border-radius: 7px;
+ 
+}
+p{
+    font-family:'Roboto';
+}
+
+#About .info p{
+    max-width: 80%;
+    min-width: 750px;
+    text-align: justify;
+    margin-top:15px;
+    /*top:-125px;
+    left: 400px;*/
+}
+#About .achievement{
+    background-color: rgb(152, 152, 152);
+    text-align:center;
+    align-items:center;
+    justify-content: center;
+    margin-top: 50px;
+    height: 200px;
+    display:flex;
+    padding-bottom: 50px;
+}
+
+#About .achievement .icons {
+    margin: 10px 40px; 
+    height: 90px;
+    width: 260px;
+}
+
+#About .achievement .icons img{
+    height: 90px;
+    width: 90px;
+}
+
+#About .achievement .icons p{
+    margin-top: 10px;
+}
+
+#menu .menu{
+    display: flex;
+    justify-content: center;
+    margin-top: 90px;
+    margin-bottom: 90px;
+}
+
+#menu .food{
+    width: 400px;
+    height: 400px;
+    margin-top: 40px;
+    margin-right: 20px;
+}
+
+#menu .image img{
+    height: 600px;
+    width: 400px;
+    margin-left: 20px;
+}
+
+#menu p{
+    color:rgb(135, 130, 130);
+}
+
+footer{
+    width: 100%;
+    height: 90px;
+    background-color:rgb(152, 152, 152)
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*Why cant i center the link if i use the selector 
+#home .text a{
+    text-align:center;
+}*/
+
+
+
+
+
+
+/*#home .text .linkA{
+  top: 670px;
+  left: 400px;
+  font-size: 25px;
+  border: 3px solid red;
+  border-radius: 3px;
+  padding: 15px 24px;
+  transition: .3s ease;
+}
+
+#home .text .linkA:hover{
+    background-color: red;
+}
+
+#home .text .linkB{
+    top: 670px;
+    left: 750px;
+    font-size: 25px;
+    border: 3px solid rgb(24, 88, 24);
+    border-radius: 3px;
+    padding: 15px 24px;
+    transition: .3s ease;
+}
+
+#home .text .linkB:hover:hover{
+    background-color: rgb(24, 88, 24);
+}*/
+
